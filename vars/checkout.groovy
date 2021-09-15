@@ -1,5 +1,5 @@
 @NonCPS
-def checkout(String repo, String branch = "main"){
+def checkoutCode(String repo, String branch = "main"){
     stage("Checkout"){
         checkout scm: [
             $class: 'GitSCM', 
