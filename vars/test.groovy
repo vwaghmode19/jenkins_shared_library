@@ -10,7 +10,7 @@ def getRepoURL(String url){
 }
 
 def checkoutRepo(String branchName){
-	checkout([$class             : 'GitSCM', 
+	checkout(scm: [$class             : 'GitSCM', 
 			   branches          : [[name: + 'branchName']], 
 			   userRemoteConfigs : [[url: + getRepoURL.repoURL ]]
 	])
