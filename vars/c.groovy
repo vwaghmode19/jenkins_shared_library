@@ -1,3 +1,4 @@
+@NonCPS
 def checkout(){
     stage('Checkout') {
 	checkout([$class            : 'GitSCM', 
