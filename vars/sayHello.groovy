@@ -1,3 +1,5 @@
-def sayHello(string name){
-	println("Hello "+ \"$name\")
+#!/usr/bin/env groovy
+
+def call(String name = 'human') {
+  echo "Hello, ${name}."
 }
