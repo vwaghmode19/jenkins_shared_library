@@ -7,11 +7,6 @@ def checkout(String node, String repoURL, String branchName, String credentialsI
 					branches          : [[name: branchName]], 
 					userRemoteConfigs : [[credentialsId: credentialsId, url: 'git@github.com:vwaghmode19/simple-java-maven-app.git']]
 				])
-			}
 		}
 	}
-
-Map sourceCheckout() {
-    echo "Checkout"
-    return checkout(scm)
 }
