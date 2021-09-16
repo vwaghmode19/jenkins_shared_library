@@ -1,8 +1,0 @@
-@Library('jenkins_shared_library') _
-
-node('master') {
-    
-    stage('sayHello') {
-        sayHello('Vikas')
-    }
-}
