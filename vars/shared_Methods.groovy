@@ -27,6 +27,6 @@ def simpleCheckout() {
                     $class                           : 'GitSCM',
                     branches                         : 'main',
                     //userRemoteConfigs                : 'git@github.com:vwaghmode19/jenkins_shared_library.git'
-					          userRemoteConfigs : [[credentialsId: credentialsId, url: 'git@github.com:vwaghmode19/simple-java-maven-app.git']]
+					          userRemoteConfigs : [[credentialsId: vwaghmode19-github, url: 'git@github.com:vwaghmode19/simple-java-maven-app.git']]
     ])
 }
