@@ -7,8 +7,8 @@ def sayHello(String name = 'human') {
   }
 }
 
-def checkout(String node, String branchName, String credentialsId){
-        node(node){
+def checkoutFn(String branchName, String credentialsId){
+        node('master'){
                 stage("Checkout") {
                         script{
                                 checkout([$class           : 'GitSCM',
