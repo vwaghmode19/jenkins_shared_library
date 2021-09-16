@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 //@NonCPS
-def checkout(String node, String repoURL, String branchName, String credentialsId){
+void checkout(String node, String repoURL, String branchName, String credentialsId){
 	node(node){
 		stage("Checkout") {
 				checkout([$class           : 'GitSCM', 
