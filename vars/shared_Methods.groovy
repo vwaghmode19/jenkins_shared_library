@@ -10,13 +10,11 @@ def sayHello(String name = 'human') {
 def checkoutFn(String branchName, String credentialsId){
         node('master'){
                 stage("Checkout") {
-                        script{
                                 checkout([$class           : 'GitSCM',
                                         branches          : [[name: branchName]],
                                         userRemoteConfigs : [[credentialsId: credentialsId, url: 'git@github.com:vwaghmode19/simple-java-maven-app.git']]
                                 ])
-                        }
-                }
+                      }
         }
 }
 
