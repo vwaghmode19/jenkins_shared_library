@@ -2,9 +2,9 @@
 
 node('master') {
     
-    stage('sayHello') {
-        hello('Vikas')
-    }
+    //stage('sayHello') {
+    //    hello('Vikas')
+   // }
     
     stage('Checkout'){
         deployActions.infraCheckout()
