@@ -3,6 +3,11 @@
 node('master') {
     
     stage('sayHello') {
-        sayHello('Vikas')
+        hello('Vikas')
     }
+    
+    stage('Checkout'){
+        deployActions.infraCheckout()
+    }
+}
 }
