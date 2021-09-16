@@ -1,3 +1,4 @@
+@NonCPS
 void prepareInfra(String infraNode, String repoURL, String repoBranch) {
     node(infraNode) {
         stage('Checkout infra') {
