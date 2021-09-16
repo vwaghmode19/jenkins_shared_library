@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-@NonCPS
+//@NonCPS
 def checkout(String node, String repoURL, String branchName, String credentialsId){
 	node(node){
 		stage("Checkout") {
