@@ -5,7 +5,7 @@ def checkout(String node, String repoURL, String branchName, String credentialsI
 		stage("Checkout") {
 				checkout([$class           : 'GitSCM', 
 					branches          : [[name: branchName]], 
-					userRemoteConfigs : [[credentialsId: credentialsId, url: 'git@github.com:vwaghmode19/jenkins_shared_library.git']]
+					userRemoteConfigs : [[credentialsId: credentialsId, url: 'git@github.com:vwaghmode19/simple-java-maven-app.git']]
 				])
 			}
 		}
