@@ -21,7 +21,6 @@ def sayHello(String name = 'human') {
 def simpleCheckout() {
     
     checkout(
-	    wait(60);
 	    changelog: false,
             poll: false,
             scm: [
