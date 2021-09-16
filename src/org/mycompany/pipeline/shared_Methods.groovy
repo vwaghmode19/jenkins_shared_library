@@ -1,4 +1,5 @@
 #!/usr/bin/env groovy
+package org.mycompany.pipeline.shared_Methods
 def sayHello(String name = 'human') {
   node('master'){
         stage("Say Hello"){
