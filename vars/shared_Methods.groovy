@@ -7,14 +7,26 @@ def sayHello(String name = 'human') {
   }
 }
 
-def checkoutFn(String branchName, String credentialsId){
-        node('master'){
-                stage("Checkout") {
-                                checkout([$class           : 'GitSCM',
-                                        branches          : [[name: branchName]],
-                                        userRemoteConfigs : [[credentialsId: credentialsId, url: 'git@github.com:vwaghmode19/simple-java-maven-app.git']]
-                                ])
-                      }
-        }
-}
+// def checkoutFn(String branchName, String credentialsId){
+//         node('master'){
+//                 stage("Checkout") {
+//                                 checkout([$class           : 'GitSCM',
+//                                         branches          : [[name: branchName]],
+//                                         userRemoteConfigs : [[credentialsId: credentialsId, url: 'git@github.com:vwaghmode19/simple-java-maven-app.git']]
+//                                 ])
+//                       }
+//         }
+// }
 
+def simpleCheckout() {
+    
+    checkout(
+            changelog: false,
+            poll: false,
+            scm: [
+                    $class                           : 'GitSCM',
+                    branches                         : 'main',
+                    //userRemoteConfigs                : 'git@github.com:vwaghmode19/jenkins_shared_library.git'
+					          userRemoteConfigs : [[credentialsId: credentialsId, url: 'git@github.com:vwaghmode19/simple-java-maven-app.git']]
+    ])
+}
