@@ -1,11 +1,10 @@
 def CodeCheckout(){
-    stage('Checkout') {
-		script{
-		    checkout([$class           : 'GitSCM', 
-		         branches          : [[name: 'master']], 
+	script{
+	    checkout([$class           : 'GitSCM', 
+	         branches          : [[name: 'master']], 
                  userRemoteConfigs : [[credentialsId: 'vwaghmode19-github', 
-                                    url: 'https://github.com/vwaghmode19/simple-java-maven-app.git']]
+                                url: 'https://github.com/vwaghmode19/simple-java-maven-app.git']]
             ])
-		}
 	}
+
 }
