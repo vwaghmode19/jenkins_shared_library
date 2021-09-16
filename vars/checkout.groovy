@@ -10,3 +10,8 @@ def checkout(String node, String repoURL, String branchName, String credentialsI
 			}
 		}
 	}
+
+Map sourceCheckout() {
+    echo "Checkout"
+    return checkout(scm)
+}
