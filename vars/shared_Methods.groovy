@@ -1,30 +1,13 @@
-#!/usr/bin/env groovy
-def sayHello(String name = 'human') {
-  node('master'){
-        stage("Say Hello"){
-        echo "Hello, ${name}."
-        }
-  }
-}
 
-// def checkoutFn(String branchName, String credentialsId){
-//         node('master'){
-//                 stage("Checkout") {
-//                                 checkout([$class           : 'GitSCM',
-//                                         branches          : [[name: branchName]],
-//                                         userRemoteConfigs : [[credentialsId: credentialsId, url: 'git@github.com:vwaghmode19/simple-java-maven-app.git']]
-//                                 ])
-//                       }
-//         }
-// }
-
-def simpleCheckout(Script ScriptRef) {
-    
-    ScriptRef.checkout([
-                    $class		: 'GitSCM',
-                    branches		: 'main',
-                    userRemoteConfigs	: [[credentialsId: 'vwaghmode19-github', url: 'git@github.com:vwaghmode19/simple-java-maven-app.git']]
-    ])
-	
-	//checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'vwaghmode19-github', url: 'git@github.com:vwaghmode19/jenkins_shared_library.git']]])
+class sample {
+	def clone(Script scriptRef, String gitURLString, String branchID, String gitUserID){
+		scriptRef.checkout([
+				$class: 'GitSCM',
+				branches: [[name: branchID]],
+				doGenerateSubmoduleConfigurations: false,
+				extensions: [[$class: 'CleanCheckout']],
+				submoduleCfg: [],
+				userRemoteConfigs: [[credentialsId: gitUserID, url: gitURLString]]
+		])
+	}
 }
