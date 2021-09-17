@@ -1,5 +1,5 @@
 
-class sample {
+class shared_Methods {
 	def clone(Script scriptRef, String gitURLString, String branchID, String gitUserID){
 		scriptRef.checkout([
 				$class: 'GitSCM',
