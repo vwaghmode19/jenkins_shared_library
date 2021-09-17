@@ -1,5 +1,5 @@
 class sample {
-	def clone(String ScriptRefString gitURLString, String branchID, String gitUserID){
+	def clone(String ScriptRefString, String gitURLString, String branchID, String gitUserID){
 		ScriptRef.checkout([
 				$class: 'GitSCM',
 				branches: [[name: branchID]],
