@@ -20,14 +20,10 @@ def sayHello(String name = 'human') {
 
 def simpleCheckout() {
     
-    this.checkout(
-	    changelog: false,
-            poll: false,
-            scm: [
+    this.checkout([
                     $class		: 'GitSCM',
                     branches		: 'main',
-                    //userRemoteConfigs	: 'git@github.com:vwaghmode19/jenkins_shared_library.git'
-		    userRemoteConfigs	: [[credentialsId: 'vwaghmode19-github', url: 'git@github.com:vwaghmode19/simple-java-maven-app.git']]
+                    userRemoteConfigs	: [[credentialsId: 'vwaghmode19-github', url: 'git@github.com:vwaghmode19/simple-java-maven-app.git']]
     ])
 	
 	//checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'vwaghmode19-github', url: 'git@github.com:vwaghmode19/jenkins_shared_library.git']]])
