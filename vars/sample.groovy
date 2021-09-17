@@ -1,5 +1,4 @@
 class sample {
-	node('master'){
 		stage('Code Checkout'){
 			def clone(Script scriptRef, String gitURLString, String branchID, String gitUserID){
 				scriptRef.checkout([
@@ -9,5 +8,4 @@ class sample {
 				])
 			}
 		}
-	}
 }
