@@ -1,6 +1,6 @@
 class sample {
-	def clone(Script scriptRef, String gitURLString, String branchID, String gitUserID){
-		scriptRef.checkout([
+	def clone(String gitURLString, String branchID, String gitUserID){
+		this.checkout([
 				$class: 'GitSCM',
 				branches: [[name: branchID]],
 				doGenerateSubmoduleConfigurations: false,
