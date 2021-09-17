@@ -20,7 +20,7 @@ def sayHello(String name = 'human') {
 
 def simpleCheckout() {
     
-    checkout(
+    this.checkout(
 	    changelog: false,
             poll: false,
             scm: [
