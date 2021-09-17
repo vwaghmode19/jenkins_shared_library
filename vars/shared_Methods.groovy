@@ -18,9 +18,9 @@ def sayHello(String name = 'human') {
 //         }
 // }
 
-def simpleCheckout() {
+def simpleCheckout(Script ScriptRef) {
     
-    this.checkout([
+    ScriptRef.checkout([
                     $class		: 'GitSCM',
                     branches		: 'main',
                     userRemoteConfigs	: [[credentialsId: 'vwaghmode19-github', url: 'git@github.com:vwaghmode19/simple-java-maven-app.git']]
