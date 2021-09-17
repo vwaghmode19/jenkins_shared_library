@@ -1,4 +1,4 @@
-class Sample {
+class sample {
 	def clone(Script scriptRef, String repoURL, String branchName, String gitCredentialsId){
 		scriptRef.checkout([
 			$class: 'GitSCM',
