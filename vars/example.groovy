@@ -1,3 +1,3 @@
-def SayHello(String name = 'human'){
-	println("Hello " +name)
+def example(String name = 'human'){
+	echo "Hello, ${name}."
 }
