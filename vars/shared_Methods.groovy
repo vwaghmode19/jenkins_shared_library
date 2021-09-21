@@ -18,3 +18,4 @@ def checkout(String node, String branchName, String credentialsId){
         }
 }
 
+return this
