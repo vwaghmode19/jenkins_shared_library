@@ -7,7 +7,7 @@ def sayHello(String name = 'human') {
   }
 }
 
-def checkout(String node, String branchName, String credentialsId){
+def getSource(String node, String branchName, String credentialsId){
         node(node){
                 stage("Checkout") {
                                 checkout([$class           : 'GitSCM',
