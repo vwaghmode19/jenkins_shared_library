@@ -10,10 +10,10 @@ def sayHello(String name = 'human') {
 def getSource(String nodeName, String branchName, String credentialsId){
         node(nodeName){
                 stage("Checkout") {
-                                checkout([$class           : 'GitSCM',
+                                checkout scm: [$class           : 'GitSCM',
                                         branches          : [[name: branchName]],
                                         userRemoteConfigs : [[credentialsId: credentialsId, url: 'git@github.com:vwaghmode19/simple-java-maven-app.git']]
-                                ])
+                                ]
                 }
         }
 }
