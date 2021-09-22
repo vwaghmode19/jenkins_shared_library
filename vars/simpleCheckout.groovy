@@ -1,9 +1,5 @@
 class SimpleCheckout{
-        String branchName
-        String repoCredId
-        String repoURL
-
-        void getSource(String branchName, String repoCredId, String repoURL){
+      void getSource(String branchName, String repoCredId, String repoURL){
                 println ("Branch Name:" +branchName +
                                 " \n Repo Cred ID:" +repoCredId +
                                 " \n Repo URL:" +repoURL )
