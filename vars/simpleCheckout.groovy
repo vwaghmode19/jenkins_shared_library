@@ -1,3 +1,4 @@
+import jenkins.model.*
 class SimpleCheckout{
       void getSource(String branchName, String repoCredId, String repoURL){
                 println ("Branch Name:" +branchName +
