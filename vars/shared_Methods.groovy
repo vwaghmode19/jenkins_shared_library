@@ -7,7 +7,7 @@ def sayHello(String name = 'human') {
   }
 }
 
-def getSource(String nodeName, String branchName, String credentialsId){
+def getSource(String nodeName = 'master', String branchName = 'main', String credentialsId = 'vwaghmode19-github'){
         node(nodeName){
                 stage("Checkout") {
                                 checkout scm: [$class           : 'GitSCM',
