@@ -7,12 +7,12 @@ def sayHello(String name = 'human') {
   }
 }
 
-def getSource(String nodeName = 'master', String branchName = 'main', String credentialsId = 'vwaghmode19-github'){
+def getSource(String nodeName = 'master', String branchName = 'main', String credentialsId = "vwaghmode19-github"){
         node(nodeName){
-                stage("Checkout") {
-                                checkout scm: [$class           : 'GitSCM',
+                stage("VictoryVikas") {
+                                checkout scm: [$class     : 'GitSCM',
                                         branches          : [[name: branchName]],
-                                        userRemoteConfigs : [[credentialsId: credentialsId, url: 'git@github.com:vwaghmode19/simple-java-maven-app.git']]
+                                        userRemoteConfigs : [[credentialsId: credentialsId, url: "git@github.com:vwaghmode19/simple-java-maven-app.git"]]
                                 ]
                 }
         }
