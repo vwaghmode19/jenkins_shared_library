@@ -1,6 +1,6 @@
 @Library('jenkins_shared_library') _
 
-log.info 'Starting'
+log.info 'Starting'   // log.groovy-- info(message)
 def z = new SharedMethods()
 
 // sayHello(String nodeName, String name)
