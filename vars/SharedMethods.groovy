@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-def sayHello(String nodeName = 'master', String name = 'human') {
+def sayHello(String nodeName, String name) {
   node(nodeName){
         stage("Say Hello"){
         echo "Hello, ${name}."
@@ -7,7 +7,8 @@ def sayHello(String nodeName = 'master', String name = 'human') {
   }
 }
 
-def getSource(String nodeName = 'master', String branchName = 'main', String credsID = 'vwaghmode19-github', String repoURL){
+//def getSource(String nodeName = 'master', String branchName = 'main', String credsID = 'vwaghmode19-github', String repoURL){
+def getSource(String nodeName, String branchName, String credsID, String repoURL){
         node(nodeName){
                 stage("Code Checkout") {
                                 checkout scm: [$class     : 'GitSCM',
