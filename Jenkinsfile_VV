@@ -1,5 +1,7 @@
 node('master'){
   stage('checkout scm') {
-    checkout scm
+    //checkout scm
+    def z = new TestB()
+    z.getSource()
  }
 }
