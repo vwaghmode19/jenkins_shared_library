@@ -1,6 +1,5 @@
-def checkoutGitRepository(path, url, branch, credentialsId = null, poll = true, timeout = 10, depth = 0, reference = ''){
+def checkoutGitRepository(url, branch, credentialsId = null, poll = true, timeout = 10, depth = 0, reference = ''){
     def branch_name = reference ? 'FETCH_HEAD' : "*/${branch}"
-    dir(path) {
         checkout(
             changelog:true,
             poll: poll,
@@ -15,5 +14,4 @@ def checkoutGitRepository(path, url, branch, credentialsId = null, poll = true, 
             userRemoteConfigs: [[url: url, credentialsId: credentialsId, refspec: reference]]]
         )
         sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
-    }
 }
