@@ -1,0 +1,12 @@
+@Library('jenkins_shared_library') _
+
+node('master'){
+    stage('A'){
+        def a = new TestA()
+        a.getSource('this')
+    }
+    stage('B'){
+        def b = new TestB()
+        b.getSource()
+    }
+}
