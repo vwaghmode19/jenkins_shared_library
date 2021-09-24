@@ -1,5 +1,6 @@
 @Library('jenkins_shared_library') _
 
+log.info 'Starting'
 def z = new SharedMethods()
 
 // sayHello(String nodeName, String name)
