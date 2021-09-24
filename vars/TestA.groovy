@@ -1,5 +1,5 @@
 class TestA{
-  void getSource(Script root){
+  void getSource(String root){
     root.checkout(scm)
   }
 }
