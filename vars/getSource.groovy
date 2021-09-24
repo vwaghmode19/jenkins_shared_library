@@ -1,0 +1,3 @@
+def getSource(){
+    checkout scm
+}
