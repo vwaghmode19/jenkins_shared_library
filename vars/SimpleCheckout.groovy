@@ -1,7 +1,7 @@
 import jenkins.model.*
 class SimpleCheckout{
       void getSource(String branchName, String repoCredId, String repoURL){
-            println("Hi There")
+            echo "Hi There"
                 println ("Branch Name:" +branchName +
                                 " \n Repo Cred ID:" +repoCredId +
                                 " \n Repo URL:" +repoURL )
