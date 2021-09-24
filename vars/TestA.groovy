@@ -1,5 +1,9 @@
 class TestA{
   void getSource(String root){
-    root.checkout(scm)
+    root.checkout([
+			$class: 'GitSCM',
+			branches: [[name: 'main']],
+			userRemoteConfigs: [[credentialsId: 'vwaghmode19-github', url: 'git@github.com:vwaghmode19/ansible.git']]
+		])
   }
 }
