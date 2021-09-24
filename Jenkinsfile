@@ -2,7 +2,8 @@
 
 node('master'){
     stage('Code Checkout'){
-        VcheckoutSCM()
+       // VcheckoutSCM()
        // sample.clone(this, "git@github.com:vwaghmode19/ansible.git", "main", "vwaghmode19-github")
+        getSource.getSource()
     }
 }
