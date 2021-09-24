@@ -1,3 +1,4 @@
-def getSource(){
+void getSource(){
     checkout scm
 }
+return this
