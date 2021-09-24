@@ -1,4 +1,4 @@
-void getSource(){
+def getSource(){
   checkout scm
 }
 
