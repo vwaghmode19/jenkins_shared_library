@@ -1,7 +1,7 @@
 import jenkins.model.*
 class SimpleCheckout{
       void getSource(String branchName, String repoCredId, String repoURL){
-            println ("Branch Name:" +branchName + " Repo Cred ID:" +repoCredId +" Repo URL:" +repoURL)
+            System.out.println ("Branch Name:" +branchName + " Repo Cred ID:" +repoCredId +" Repo URL:" +repoURL)
 
 /*              checkout([$class: 'GitSCM',
                                 branches: [[name: 'main']],
