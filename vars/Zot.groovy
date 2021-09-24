@@ -1,6 +1,6 @@
-def checkOutFrom() {
+def checkOutFrom(String branchName, String credsID, String repoName) {
   //git url: "git@github.com:vwaghmode19/${repo}"
-  git branch: 'main', credentialsId: 'vwaghmode19-github', url: 'git@github.com:vwaghmode19/ansible.git'
+  git branch: "${branchName}", credentialsId: "${credsID}", url: "git@github.com:vwaghmode19/${repoName}"
 }
 
 return this
