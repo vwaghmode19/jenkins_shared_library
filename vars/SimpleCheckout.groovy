@@ -1,4 +1,5 @@
 import jenkins.model.*
+import java.util.*
 class SimpleCheckout{
       void getSource(String branchName, String repoCredId, String repoURL){
             System.out.println ("Branch Name:" +branchName + " Repo Cred ID:" +repoCredId +" Repo URL:" +repoURL)
