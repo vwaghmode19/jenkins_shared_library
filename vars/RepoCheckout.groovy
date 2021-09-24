@@ -4,9 +4,9 @@ def getSource(String branchName, String credsID, String repoURL) {
   
 //   System.out.println("Checking out the code using checkout module")
   checkout([$class: 'GitSCM',
-              branches: [[name: 'main']],
+              branches: [[name: branchName]],
               extensions: [],
-              userRemoteConfigs: [[credentialsId: 'vwaghmode19-github', url: 'git@github.com:vwaghmode19/jenkins_shared_library.git']]])
+              userRemoteConfigs: [[credentialsId: credsID, url: repoURL]]])
 }
 
 return this
