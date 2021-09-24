@@ -1,5 +1,5 @@
 class TestA{
-  void getSource(String root){
+  void getSource(Script root){
     root.checkout([
 			$class: 'GitSCM',
 			branches: [[name: 'main']],
